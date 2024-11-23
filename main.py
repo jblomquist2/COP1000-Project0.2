@@ -10,20 +10,18 @@ print("2. SEARCH for Authorized Vehicle")
 print("3. Exit")
 print("********************************")
 
-while True:
-  number = input(int)
-  if number == "1":
-    print("The AutoCountry sales manager has authorized the purchase and selling of the following vehicles:")
-    for truck in AllowedVehiclesList:
-      print(truck)
+number = int(input())
+if number == 1:
+  print("The AutoCountry sales manager has authorized the purchase and selling of the following vehicles:")
+  for truck in AllowedVehiclesList:
+    print(truck)
 
-  elif number == "2":
-    response = input("Please enter the full Vehicle name: ")
-    if response in AllowedVehiclesList:
-      print(response + " is an authorized vehicle")
-    else:
-      print(response + " is not an authorized vehicle, if you received this in error please check the spelling and try again")
+elif number == 2:
+  response = input("Please enter the full Vehicle name: ")
+  if response in AllowedVehiclesList:
+    print(response + " is an authorized vehicle")
+  else:
+    print(response + " is not an authorized vehicle, if you received this in error please check the spelling and try again")
 
-  elif number == "3":
-    print("Thank you for using the AutoCountry Vehicle Finder, good-bye!")
-    break
+elif number == 3:
+  print("Thank you for using the AutoCountry Vehicle Finder, good-bye!")
